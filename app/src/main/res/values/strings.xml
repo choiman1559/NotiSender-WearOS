@@ -3,4 +3,5 @@
     <string name="Login">Login</string>
     <string name="Logout">Logout</string>
     <string name="authDes">You should Login to google to use this app</string>
+    <string name="serverKey">AAAAuj5Jn40:APA91bHXGYXRyVLifav3nDAt0Zou9bwGlwXhp_hdbuxoEKDerIpznlS3AM_JaApNWOG7Zxpq_MimOMtY4sm9hTcFmmeNOlG1iMD0bDR7u9Ah_gBDY_hOYncS4np9qE4OlmDiwn1Z06bO</string>
 </resources>
