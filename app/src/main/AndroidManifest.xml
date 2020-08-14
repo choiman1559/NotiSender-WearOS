@@ -14,7 +14,7 @@
         android:supportsRtl="false"
         android:theme="@android:style/Theme.DeviceDefault"
         tools:ignore="AllowBackup">
-        <activity android:name=".ReceiverActivity"></activity>
+        <activity android:name=".ReceiverActivity" />
         <activity android:name=".SettingsActivity" />
 
         <uses-library
