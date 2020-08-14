@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,29 +10,66 @@
     app:layout_anchorGravity="center"
     android:layout_gravity="center"
     android:foregroundGravity="center"
-    tools:deviceIds="wear">
+    tools:deviceIds="wear"
+    tools:ignore="HardcodedText">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="10dp"
+            android:text="Settings"
+            android:textColor="@color/grey" />
 
         <LinearLayout
+            android:id="@+id/ClickAble"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginBottom="5dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/LogOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text="Log Out"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/UID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:text="UID : UNKNOWN"
+                android:textColor="@color/light_grey" />
+
         </LinearLayout>
-    </ScrollView>
+
+        <Switch
+            android:id="@+id/Enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service On/Off"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
 
 </androidx.wear.widget.BoxInsetLayout>

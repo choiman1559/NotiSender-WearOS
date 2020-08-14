@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.nongmsauth.FirebaseRestAuth;
 import com.google.firebase.nongmsauth.FirebaseRestAuthUser;
 
@@ -106,7 +107,8 @@ public class MainActivity extends WearableActivity implements LifecycleOwner {
     void UID_Init() {
         SharedPreferences prefs = getSharedPreferences(getPackageName() + "_preferences",MODE_PRIVATE);
         if(!Objects.equals(prefs.getString("UID", ""), "")) {
-            startActivity(new Intent(MainActivity.this,SettingActivity.class));
+            FirebaseMessaging.getInstance().subscribeToTopic(prefs.getString("UID", ""));
+            startActivity(new Intent(this,SettingsActivity.class));
             this.finish();
         }
     }

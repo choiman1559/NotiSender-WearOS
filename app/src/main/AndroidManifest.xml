@@ -14,7 +14,9 @@
         android:supportsRtl="false"
         android:theme="@android:style/Theme.DeviceDefault"
         tools:ignore="AllowBackup">
-        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ReceivedActivity"
+            android:theme="@style/Theme.Wearable" />
 
         <uses-library
             android:name="com.google.android.wearable"
@@ -35,8 +37,17 @@
         </activity>
 
         <service android:name="com.google.firebase.components.ComponentDiscoveryService">
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.nongmsauth.internal.RestAuthRegistrar"
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.nongmsauth.internal.RestAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <service
+            android:name=".FirebaseMessageService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
         </service>
     </application>
 
