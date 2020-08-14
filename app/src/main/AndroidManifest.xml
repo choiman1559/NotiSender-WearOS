@@ -14,9 +14,8 @@
         android:supportsRtl="false"
         android:theme="@android:style/Theme.DeviceDefault"
         tools:ignore="AllowBackup">
+        <activity android:name=".ReceiverActivity"></activity>
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".ReceivedActivity"
-            android:theme="@style/Theme.Wearable" />
 
         <uses-library
             android:name="com.google.android.wearable"

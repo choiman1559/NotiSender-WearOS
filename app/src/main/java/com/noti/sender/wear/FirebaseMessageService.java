@@ -31,7 +31,7 @@ public class FirebaseMessageService extends FirebaseMessagingService {
 
     public void sendNotification(String title, String content, String Package, String AppName,String Device_name,String Device_id,String Date) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Intent notificationIntent = new Intent(FirebaseMessageService.this, ReceivedActivity.class)
+        Intent notificationIntent = new Intent(FirebaseMessageService.this, ReceiverActivity.class)
                 .putExtra("package", Package)
                 .putExtra("device_id",Device_id)
                 .putExtra("appname",AppName)
